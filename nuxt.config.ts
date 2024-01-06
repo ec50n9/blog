@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   routeRules: {
     // prerender index route by default
-    '/': { prerender: true },
+    "/": { prerender: true },
+  },
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
   },
 });

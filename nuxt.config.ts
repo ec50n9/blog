@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     // prerender index route by default
     "/": { prerender: true },
   },
+  modules: ["@unocss/nuxt"],
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },

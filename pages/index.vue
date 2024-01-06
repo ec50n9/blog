@@ -21,7 +21,7 @@ const articleList = useState<Article[]>("articleList", () => [
 
 <template>
   <div>
-    <AppHeader title="ec50n9 的杂货铺" />
+    <p class="py-4 px-8 text-center leading-tight text-5xl font-bold font-stylish c-emerald-6"> 👋 Hi there, welcome to My Blog! </p>
     <AppNav class="mt-3 px-4" :nav-list="navList" />
     <ArticleList class="mt-3 px-4" :article-list="articleList" />
   </div>

@@ -8,7 +8,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="container" class="h-screen of-auto">
+  <div ref="container" class="h-screen of-auto bg-orange-50">
     <div class="py-[50vh]">
       <h1 class="text-5xl text-center c-transparent">2024，万事可期</h1>
     </div>

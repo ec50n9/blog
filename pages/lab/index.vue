@@ -1,10 +1,14 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useHead({
+  title: "小蜗实验室",
+});
+</script>
 
 <template>
-  <div class="c-emerald-7">
-    <h1>这里是实验室</h1>
-    <ul>
-      <li>
+  <div>
+    <AppHeader title="小蜗实验室" />
+    <ul class="p-4">
+      <li class="c-blue-5 underline">
         <NuxtLink to="/lab/magic-text-bg">神奇文字背景</NuxtLink>
       </li>
     </ul>

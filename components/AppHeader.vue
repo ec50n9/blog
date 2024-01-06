@@ -1,7 +1,11 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+defineProps<{
+  title?: string;
+}>();
+</script>
 
 <template>
-  <div class="px-4 pb-4 pt-5">
-    <h1 class="text-3xl c-blue-5">ec50n9 的杂货铺</h1>
+  <div class="px-4 pt-8">
+    <h1 class="text-4xl c-blue-5">{{ title || "别来无恙！" }}</h1>
   </div>
 </template>

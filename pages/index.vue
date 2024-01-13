@@ -39,3 +39,9 @@ const articleList = useState<Article[]>("articleList", () => [
     </div>
   </div>
 </template>
+
+<style>
+:root {
+  color-scheme: light dark;
+}
+</style>

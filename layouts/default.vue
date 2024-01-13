@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="min-h-screen bg-white c-slate-7">
+  <div class="min-h-screen light:bg-white dark:bg-slate-900 c-slate-7">
     <slot />
     <AppFooter />
   </div>

@@ -7,6 +7,7 @@ const navList = useState("lab-nav", () => [
   { name: "神奇文字背景", path: "/lab/magic-text-bg" },
   { name: "幽灵输入框", path: "/lab/ghost-input-text" },
   { name: "高度动画", path: "/lab/height-transition" },
+  { name: "视图过渡动画", path: "/lab/view-transition" },
 ]);
 </script>
 

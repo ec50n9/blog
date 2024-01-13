@@ -4,8 +4,8 @@ useHead({
 });
 
 const navList = useState("navList", () => [
-  { name: "实验室", path: "/lab" },
-  { name: "关于", path: "/about" },
+  { title: "实验室", path: "/lab", name: 'lab' },
+  { title: "关于", path: "/about" },
 ]);
 
 const articleList = useState<Article[]>("articleList", () => [
@@ -39,9 +39,3 @@ const articleList = useState<Article[]>("articleList", () => [
     </div>
   </div>
 </template>
-
-<style>
-:root {
-  color-scheme: light dark;
-}
-</style>

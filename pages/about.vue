@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-definePageMeta({
-  pageTransition: {
-    name: 'rotate'
-  }
-})
+// definePageMeta({
+//   pageTransition: {
+//     name: 'rotate'
+//   }
+// })
 
 useHead({
   title: '关于 - ec50n9 的杂货铺',

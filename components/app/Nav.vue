@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 defineProps<{
-  navList: { name: string; path: string }[]
-}>()
+  navList: { title: string; path: string; name?: string }[];
+}>();
 </script>
 
 <template>
@@ -11,7 +11,11 @@ defineProps<{
       :key="item.path"
       class="px-4 py-1.5 rd-full bg-emerald-100 c-emerald-7"
     >
-      <NuxtLink :to="item.path">{{ item.name }}</NuxtLink>
+      <NuxtLink :to="item.path"
+        ><span :view-transition-name="item.name">{{
+          item.title
+        }}</span></NuxtLink
+      >
     </li>
   </ul>
 </template>

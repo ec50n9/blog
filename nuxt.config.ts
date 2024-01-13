@@ -7,6 +7,9 @@ export default defineNuxtConfig({
   },
   modules: ["@unocss/nuxt"],
   app: {
-    pageTransition: { name: "page", mode: "out-in" },
+    // pageTransition: { name: "page", mode: "out-in" },
   },
+  experimental: {
+    viewTransition: true,
+  }
 });

@@ -9,6 +9,10 @@ import '@unocss/reset/tailwind-compat.css'
 </template>
 
 <style>
+:root {
+  color-scheme: dark;
+}
+
 /* 高斯模糊转场 */
 .page-enter-active,
 .page-leave-active {

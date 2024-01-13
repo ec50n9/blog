@@ -1,8 +1,11 @@
-<script lang="ts" setup>
-</script>
+<script lang="ts" setup></script>
 
 <template>
-  <div class="min-h-screen light:bg-white dark:bg-slate-900 c-slate-7">
+  <div
+    min-h="screen"
+    bg="@light:white @dark:black"
+    text="@light:slate-7 @dark:slate-4"
+  >
     <slot />
     <AppFooter />
   </div>

@@ -12,43 +12,11 @@ const gotoArticle = (id: string) => {
 
 <template>
   <ul flex="~ col gap-4">
-    <li
+    <ArticleItem
       v-for="item in articleList"
       :key="item._id"
-      p-3
-      flex="~ col"
-      bg-slate-1
-      rd-2xl
-      :view-transition-name="currId === item._id ? 'article-bg' : ''"
-      @click="gotoArticle(item._id)"
-    >
-      <!-- 标题 -->
-      <p w-fit text="xl emerald-6" font="semibold" cursor-pointer>
-        <span
-          :view-transition-name="currId === item._id ? 'article-title' : ''"
-          >{{ item.title }}</span
-        >
-      </p>
-      <!-- 副标题 -->
-      <p
-        mt-1
-        text="slate-4"
-        :view-transition-name="currId === item._id ? 'article-content' : ''"
-      >
-        {{ item.summary }}
-      </p>
-      <!-- 封面 -->
-      <p>
-        <img
-          m="t-2 x-auto"
-          w-full
-          aspect-video
-          object-cover
-          rd-xl
-          :src="item.cover"
-          :view-transition-name="currId === item._id ? 'article-cover' : ''"
-        />
-      </p>
-    </li>
+      :article="item"
+      v-model:curr-id="currId"
+    />
   </ul>
 </template>

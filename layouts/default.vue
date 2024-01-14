@@ -6,7 +6,9 @@
     bg="@light:white @dark:black"
     text="@light:slate-7 @dark:slate-4"
   >
-    <slot />
+    <div container mx-auto>
+      <slot />
+    </div>
     <AppFooter />
   </div>
 </template>

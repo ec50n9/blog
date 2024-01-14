@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { listArticles } from '~/api/article';
+
 useHead({
   title: "ec50n9 的杂货铺",
 });
@@ -9,15 +11,15 @@ const navList = useState("navList", () => [
   { title: "关于", path: "/about" },
 ]);
 
-const articleList = useState<Article[]>("articleList", () => [
-  {
-    id: 1,
-    title: "测试文章",
-    content: "测试内容",
-    created_at: Date.now(),
-    updated_at: Date.now(),
-  },
-]);
+/** 文章列表分页 */
+const pageParams = useState(() => {
+  return {
+    pageNo: 1,
+    pageSize: 10,
+  };
+});
+
+const { data: articles } = await listArticles(pageParams.value);
 </script>
 
 <template>
@@ -36,7 +38,7 @@ const articleList = useState<Article[]>("articleList", () => [
 
     <div class="mt-5 px-4">
       <h2 class="text-2xl">🚀 近期动态</h2>
-      <ArticleList class="mt-2 ml-3" :article-list="articleList" />
+      <ArticleList class="mt-2" :article-list="articles" />
     </div>
   </div>
 </template>

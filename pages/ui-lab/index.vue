@@ -7,6 +7,7 @@ const navList = useState(() => [
     path: "/ui-lab/floating-label",
     name: "ui-floating-label-title",
   },
+  { title: "折叠面板", path: "/ui-lab/collapse", name: "ui-collapse-title" },
 ]);
 </script>
 

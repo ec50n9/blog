@@ -8,7 +8,7 @@ useHead({
 const navList = useState("navList", () => [
   { title: "小蜗实验室", path: "/experimental-lab", name: "experimental-lab" },
   { title: "UI 实验室", path: "/ui-lab", name: "ui-lab" },
-  { title: "关于", path: "/about" },
+  { title: "关于", path: "/about", name: "about" },
 ]);
 
 /** 文章列表分页 */

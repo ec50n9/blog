@@ -16,11 +16,11 @@ const html = converter.makeHtml(mdContent);
 </script>
 
 <template>
-  <div class="p-4">
-    <h1 text-3xl font-bold>
+  <div h-screen of-auto>
+    <h1 m="t-8 x-4" text-3xl font-bold>
       <span view-transition-name="article-title">{{ article.title }}</span>
     </h1>
-    <article m="t-5" text-base prose prose-slate xl="text-xl" v-dompurify-html="html">
+    <article m="t-5 x-4" text-base prose prose-slate xl="text-xl" v-dompurify-html="html">
       <div>加载中...</div>
     </article>
   </div>

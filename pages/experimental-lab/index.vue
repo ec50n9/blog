@@ -19,8 +19,8 @@ const navList = useState(() => [
   <div>
     <div p="x-4 t-8">
       <h1 text="3xl">
-        <span view-transition-name="magic">神奇小蜗</span
-        ><span view-transition-name="experimental-lab">实验室</span>
+        <span view-transition-name="magic">神奇</span
+        ><span view-transition-name="experimental-lab">小蜗实验室</span>
       </h1>
     </div>
     <ul class="p-4">

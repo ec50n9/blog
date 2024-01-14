@@ -1,6 +1,7 @@
 interface ArticleListVO {
   _id: string;
   title: string;
+  summary?: string;
   cover?: string;
   content: string;
   catalog: string;

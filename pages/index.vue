@@ -34,9 +34,9 @@ const { data: articles } = await listArticles(pageParams.value);
       <li>最近更新: <span>2024-01-06</span></li>
     </ul>
 
-    <AppNav class="mt-3 px-4" :nav-list="navList" />
+    <AppNav m="x-4 t-3" :nav-list="navList" />
 
-    <div class="mt-5 px-4">
+    <div m="x-4 y-5">
       <h2 class="text-2xl">🚀 近期动态</h2>
       <ArticleList class="mt-2" :article-list="articles" />
     </div>

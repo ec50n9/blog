@@ -12,6 +12,48 @@ export default defineConfig({
         `block px-3 py-2 bg-${c}-5 hover:bg-${c}-7 text-sm text-white font-semibold rd-md shadow`,
     ],
 
+    // 悬浮标签输入框
+    {
+      "floating-label-wrapper": "relative z-0",
+    },
+    [
+      /^floating-label-input-(.+)$/,
+      ([, type]) => {
+        const typeClasses = {
+          filled: `rounded-t-lg px-2.5 pb-2.5 pt-5 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 `,
+          outlined: `px-2.5 pb-2.5 pt-4 bg-transparent rounded-lg border-1 `,
+          standard: `py-2.5 px-0 bg-transparent border-0 border-b-2 `,
+        }[type];
+
+        if (typeClasses) {
+          const commonClasses =
+            "block w-full text-sm text-gray-900 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600";
+          return [commonClasses, typeClasses].join(" ");
+        } else return `dark:focus:border-${type}-500 focus:border-${type}-600`;
+      },
+    ],
+    [
+      /^floating-label-label-(.+)$/,
+      ([, type]) => {
+        const typeClasses = {
+          filled: `-translate-y-4 top-4 z-10 start-2.5 peer-placeholder-shown:translate-y-0 !peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4`,
+          outlined: `-translate-y-4 top-2 z-10 bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 !peer-focus:top-2 !peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 start-1`,
+          standard: `-translate-y-6 top-3 -z-10 peer-focus:start-0 peer-placeholder-shown:translate-y-0 !peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4`,
+        }[type];
+
+        if (typeClasses) {
+          const commonClasses = [
+            "text-sm text-gray-500 dark:text-gray-400",
+            "absolute duration-300 transform scale-75 origin-[0]",
+            "peer-focus:text-blue-600 peer-focus:dark:text-blue-500 !peer-focus:scale-75 rtl:peer-focus:left-auto",
+            "peer-placeholder-shown:scale-100",
+          ].join(" ");
+          return [commonClasses, typeClasses].join(" ");
+        } else
+          return `peer-focus:text-${type}-600 peer-focus:dark:text-${type}-500`;
+      },
+    ],
+
     // 开关
     {
       "toggle-wrapper": "relative inline-flex items-center cursor-pointer",

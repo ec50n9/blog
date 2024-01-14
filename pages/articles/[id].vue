@@ -20,8 +20,8 @@ const html = converter.makeHtml(mdContent);
 </script>
 
 <template>
-  <div bg-slate-1 view-transition-name="article-bg">
-    <h1 m="x-4" p="t-8" text="4xl emerald-6" font="semibold">
+  <div bg-slate-50 view-transition-name="article-bg">
+    <h1 m="x-4" p="t-10" text="4xl emerald-6" font="semibold">
       <span view-transition-name="article-title">{{ article.title }}</span>
     </h1>
     <!-- 封面 -->

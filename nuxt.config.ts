@@ -5,11 +5,11 @@ export default defineNuxtConfig({
     // prerender index route by default
     "/": { prerender: true },
   },
-  modules: ["@unocss/nuxt"],
+  modules: ["@unocss/nuxt", "@nuxt/image"],
   app: {
     // pageTransition: { name: "page", mode: "out-in" },
   },
   experimental: {
     viewTransition: true,
-  }
+  },
 });

@@ -25,11 +25,6 @@ const gotoArticle = (id: string) => {
     rd-2xl
     :view-transition-name="currId === article._id ? 'article-bg' : ''"
   >
-    <!-- 点击水波纹 -->
-    <!-- <ClientOnly>
-      <md-ripple z-1 />
-    </ClientOnly> -->
-
     <div @click="gotoArticle(article._id)">
       <!-- 标题 -->
       <p w-fit text="xl emerald-6" font="semibold" cursor-pointer select-none>

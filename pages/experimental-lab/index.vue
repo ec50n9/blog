@@ -3,13 +3,13 @@ useHead({
   title: "神奇小蜗实验室",
 });
 
-const navList = useState("lab-nav", () => [
-  { title: "神奇文字背景", path: "/lab/magic-text-bg" },
-  { title: "幽灵输入框", path: "/lab/ghost-input-text" },
-  { title: "高度动画", path: "/lab/height-transition" },
+const navList = useState(() => [
+  { title: "神奇文字背景", path: "/experimental-lab/magic-text-bg" },
+  { title: "幽灵输入框", path: "/experimental-lab/ghost-input-text" },
+  { title: "高度动画", path: "/experimental-lab/height-transition" },
   {
     title: "视图过渡动画",
-    path: "/lab/view-transition",
+    path: "/experimental-lab/view-transition",
     name: "view-transition",
   },
 ]);
@@ -20,7 +20,7 @@ const navList = useState("lab-nav", () => [
     <div p="x-4 t-8">
       <h1 text="3xl">
         <span view-transition-name="magic">神奇小蜗</span
-        ><span view-transition-name="lab">实验室</span>
+        ><span view-transition-name="experimental-lab">实验室</span>
       </h1>
     </div>
     <ul class="p-4">

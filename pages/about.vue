@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 useHead({
-  title: "关于 - ec50n9 的杂货铺",
+  title: "关于 - ec50n9",
 });
 
 console.log(useAppConfig());

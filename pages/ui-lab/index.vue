@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+useHead({
+  title: "UI 实验室 - ec50n9",
+});
+
 const navList = useState(() => [
   { title: "开关", path: "/ui-lab/toggle", name: "ui-toggle-title" },
   { title: "键盘文本", path: "/ui-lab/kbd", name: "ui-kbd-title" },

@@ -6,6 +6,10 @@ const route = useRoute();
 const articleId = route.params.id as string;
 const { data: article } = await getArticle(articleId);
 
+useHead({
+  title: article.title,
+})
+
 const converter = new showdown.Converter({
   emoji: true,
   tasklists: true,

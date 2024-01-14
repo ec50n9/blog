@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 useHead({
-  title: "神奇小蜗实验室",
+  title: "小蜗实验室 - ec50n9",
 });
 
 const navList = useState(() => [

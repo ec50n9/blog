@@ -1,0 +1,5 @@
+name: register-user
+methods:
+  - GET
+  - POST
+tags: []

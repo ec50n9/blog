@@ -1,0 +1,4 @@
+name: list-articles
+methods:
+  - GET
+tags: []

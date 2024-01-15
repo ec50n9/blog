@@ -2,4 +2,5 @@ name: register-user
 methods:
   - GET
   - POST
-tags: []
+tags:
+  - 用户

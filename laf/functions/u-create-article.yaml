@@ -1,0 +1,6 @@
+name: u-create-article
+methods:
+  - GET
+  - POST
+tags: 
+  - 文章

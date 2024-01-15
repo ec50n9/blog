@@ -2,5 +2,5 @@ name: u-create-article
 methods:
   - GET
   - POST
-tags: 
+tags:
   - 文章

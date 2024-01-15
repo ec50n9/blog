@@ -55,6 +55,8 @@ export default async function (ctx: FunctionContext, next: Function) {
     const { user } = ctx;
     if (!user) return fail("请先登录");
 
+    // TODO: 判断token是否过期
+
     if (uidBlacklist.includes(user.uid)) return fail("您的账号已被限制访问！");
   } else {
     console.log("无需登录");

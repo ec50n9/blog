@@ -1,6 +1,6 @@
 import cloud from "@lafjs/cloud";
 import { createHash } from "crypto";
-import { fail, ok } from "./system_utils";
+import { fail, ok } from "@/system_utils";
 
 const db = cloud.mongo.db;
 
@@ -32,7 +32,7 @@ export default async function (ctx: FunctionContext) {
 
     // 记录登录信息
     let query = {
-      last_ip: ctx.headers["x-real-ip"],
+      last_ip: ctx.headers["x-forwarded-for"],
       last_login_time: Date.now(),
     };
     await collection.updateOne({ _id: user._id }, { $set: query });

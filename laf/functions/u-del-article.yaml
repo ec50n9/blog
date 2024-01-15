@@ -1,0 +1,5 @@
+name: u-del-article
+methods:
+  - GET
+  - POST
+tags: []

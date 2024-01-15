@@ -18,4 +18,4 @@ export type ArticleCreateVO = Pick<
   "title" | "summary" | "cover" | "content" | "catalog_id" | "tags"
 >;
 
-export type ArticleInsertDTO = ArticleProp;
+export type ArticleInsertDTO = ArticleDO;

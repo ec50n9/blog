@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { ArticleListVO } from '~/api/article/types';
+
 const props = defineProps<{
   article: ArticleListVO;
   currId: ArticleListVO["_id"];
@@ -47,6 +49,7 @@ const gotoArticle = (id: string) => {
       <!-- 封面 -->
       <div mt-2 grid="~ cols-3 gap-2">
         <img
+          aspect-square
           object-cover
           rd-xl
           :src="article.cover"

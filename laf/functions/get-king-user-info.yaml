@@ -1,0 +1,5 @@
+name: get-king-user-info
+methods:
+  - GET
+tags:
+  - 用户

@@ -21,7 +21,7 @@ const gotoArticle = (id: string) => {
     flex="~ col"
     bg-slate-1
     ring-blue-3
-    active="bg-slate-2 ring-4 scale-95"
+    active="bg-slate-2 ring-4"
     rd-2xl
     :view-transition-name="currId === article._id ? 'article-bg' : ''"
   >
@@ -45,17 +45,14 @@ const gotoArticle = (id: string) => {
       </p>
 
       <!-- 封面 -->
-      <p>
+      <div mt-2 grid="~ cols-3 gap-2">
         <img
-          m="t-2 x-auto"
-          w-full
-          aspect-video
           object-cover
           rd-xl
           :src="article.cover"
           :view-transition-name="currId === article._id ? 'article-cover' : ''"
         />
-      </p>
+      </div>
     </div>
   </li>
 </template>

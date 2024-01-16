@@ -8,7 +8,7 @@ const { data: article } = await getArticle(articleId);
 
 useHead({
   title: article.title,
-})
+});
 
 const converter = new showdown.Converter({
   emoji: true,
@@ -20,22 +20,23 @@ const html = converter.makeHtml(mdContent);
 </script>
 
 <template>
-  <div bg-slate-50 view-transition-name="article-bg">
-    <h1 m="x-4" p="t-10" text="4xl emerald-6" font="semibold">
+  <div p="x-5 y-5" bg-slate-50 view-transition-name="article-bg">
+    <!-- 封面 -->
+    <img
+      block
+      object-cover
+      rd-xl
+      style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;"
+      :src="article.cover"
+      view-transition-name="article-cover"
+    />
+    <!-- 标题 -->
+    <h1 p="t-10" text="4xl emerald-6" font="semibold">
       <span view-transition-name="article-title">{{ article.title }}</span>
     </h1>
-    <!-- 封面 -->
-    <p m="x-4">
-      <img
-        m="y-5 x-auto"
-        object-cover
-        rd-xl
-        :src="article.cover"
-        view-transition-name="article-cover"
-      />
-    </p>
+    <!-- 内容 -->
     <article
-      m="t-5 x-4"
+      m="t-5"
       p="b-5"
       text-base
       prose

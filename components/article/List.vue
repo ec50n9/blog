@@ -4,10 +4,6 @@ defineProps<{
 }>();
 
 const currId = useState(() => "");
-const gotoArticle = (id: string) => {
-  currId.value = id;
-  navigateTo(`/articles/${id}`);
-};
 </script>
 
 <template>

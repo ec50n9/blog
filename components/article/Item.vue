@@ -1,19 +1,14 @@
 <script lang="ts" setup>
-import type { ArticleListVO } from '~/api/article/types';
+import type { ArticleListVO } from "~/api/article/types";
 
-const props = defineProps<{
+defineProps<{
   article: ArticleListVO;
-  currId: ArticleListVO["_id"];
+  active: boolean;
 }>();
 
 const emit = defineEmits<{
   (e: "update:currId", id: string): void;
 }>();
-
-const gotoArticle = (id: string) => {
-  emit("update:currId", id);
-  navigateTo(`/articles/${id}`);
-};
 </script>
 
 <template>
@@ -21,19 +16,18 @@ const gotoArticle = (id: string) => {
     relative
     p-3
     flex="~ col"
-    bg-slate-1
+    bg="slate-1 @dark:slate-9"
     ring-blue-3
-    active="bg-slate-2 ring-4"
+    active="bg-slate-2 @dark:bg-slate-8 ring-3"
     rd-2xl
-    :view-transition-name="currId === article._id ? 'article-bg' : ''"
+    :view-transition-name="active ? 'article-bg' : ''"
   >
-    <div @click="gotoArticle(article._id)">
+    <div>
       <!-- 标题 -->
       <p w-fit text="xl emerald-6" font="semibold" cursor-pointer select-none>
-        <span
-          :view-transition-name="currId === article._id ? 'article-title' : ''"
-          >{{ article.title }}</span
-        >
+        <span :view-transition-name="active ? 'article-title' : ''">{{
+          article.title
+        }}</span>
       </p>
 
       <!-- 副标题 -->
@@ -41,7 +35,7 @@ const gotoArticle = (id: string) => {
         mt-1
         text="slate-4"
         select-none
-        :view-transition-name="currId === article._id ? 'article-content' : ''"
+        :view-transition-name="active ? 'article-content' : ''"
       >
         {{ article.summary }}
       </p>
@@ -53,7 +47,7 @@ const gotoArticle = (id: string) => {
           object-cover
           rd-xl
           :src="article.cover"
-          :view-transition-name="currId === article._id ? 'article-cover' : ''"
+          :view-transition-name="active ? 'article-cover' : ''"
         />
       </div>
     </div>

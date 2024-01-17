@@ -20,7 +20,7 @@ const html = converter.makeHtml(mdContent);
 </script>
 
 <template>
-  <div p="x-5 y-5" bg-slate-50 view-transition-name="article-bg">
+  <div p="x-5 y-5" bg="slate-50 @dark:slate-9" font="sans" view-transition-name="article-bg">
     <!-- 封面 -->
     <img
       block

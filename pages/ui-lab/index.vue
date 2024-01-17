@@ -23,7 +23,7 @@ const navList = useState(() => [
     </h1>
 
     <!-- 开关提示 -->
-    <div flex="~ items-center gap-3" m="5" p="x-5 y-3" bg="slate-1" rd-xl>
+    <div flex="~ items-center gap-3" m="5" p="x-5 y-3" bg="slate-1 @dark:slate-9" rd-xl>
       <!-- 左边文本 -->
       <div grow>
         <div flex items-center text="md">

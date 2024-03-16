@@ -9,11 +9,15 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@css-render/vue3-ssr": "^0.15.12",
     "@nuxt/devtools": "^1.0.3",
     "@types/showdown": "^2.0.6",
     "@unocss/nuxt": "^0.58.3",
+    "naive-ui": "^2.38.1",
     "nuxt": "^3.8.2",
     "unocss": "^0.58.3",
+    "unplugin-auto-import": "^0.17.5",
+    "unplugin-vue-components": "^0.26.0",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
   },

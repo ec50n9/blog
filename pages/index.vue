@@ -10,6 +10,7 @@ useHead({
 const navList = useState("navList", () => [
   { title: "小蜗实验室", path: "/experimental-lab", name: "experimental-lab" },
   { title: "UI 实验室", path: "/ui-lab", name: "ui-lab" },
+  { title: "神秘小屋", path: "/chat", name: "chat" },
   { title: "关于", path: "/about", name: "about" },
 ]);
 

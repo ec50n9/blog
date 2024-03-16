@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { NFlex, NInput, NButton, NH1 } from "naive-ui";
+import { NFlex, NElement, NInput, NButton, NH1 } from "naive-ui";
 import type { ChatMember, ChatMessage } from "~/types/modules/chat";
 
 definePageMeta({
@@ -69,23 +69,42 @@ const messages = useState<ChatMessage[]>("chat-messages", () => [
     timestamp: new Date().getTime(),
   },
 ]);
+
+const chatContainer = ref<HTMLDivElement>();
+const scrollToBottom = () => {
+  setTimeout(
+    () =>
+      chatContainer.value?.scrollTo({
+        top: chatContainer.value.scrollHeight,
+        behavior: "smooth",
+      }),
+    100
+  );
+};
 </script>
 
 <template>
-  <NFlex h-full vertical>
-    <NH1 mb-0 px-3 pt-5>自言自语</NH1>
+  <div ref="chatContainer" tag="div" h-full flex flex-col of-auto vertical>
+    <NH1 shrink-0 mb-0 px-3 pt-5>自言自语</NH1>
 
     <ChatMemberList
-      class="sticky top-3 mx-3 p-3 z-1"
+      class="sticky top-3 shrink-0 mx-3 p-3 z-1"
       :members="members"
       :current-member-id="currentMember?.id"
       @select-member="handleSelectMember"
     />
 
-    <NFlex p-3 grow>
-      <ChatMessageList :messages="messages" :members="members" :me-id="currentMember?.id!" />
-    </NFlex>
+    <ChatMessageList
+      class="p-3 grow"
+      :messages="messages"
+      :members="members"
+      :me-id="currentMember?.id!"
+    />
 
-    <ChatInputBar class="sticky bottom-0 z-1" @send-message="handleSendMessage" />
-  </NFlex>
+    <ChatInputBar
+      class="sticky bottom-0 shrink-0 z-1"
+      @send-message="handleSendMessage"
+      @scorll-to-bottom="scrollToBottom"
+    />
+  </div>
 </template>

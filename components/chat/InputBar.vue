@@ -3,6 +3,7 @@ import { NConfigProvider, NInput, NButton, NFlex } from "naive-ui";
 
 const emit = defineEmits<{
   (e: "send-message", content: string): void;
+  (e: "scorll-to-bottom"): void;
 }>();
 
 const content = useState("chat-input-content", () => "");
@@ -15,6 +16,7 @@ const handleSend = () => {
 
   // 重新聚焦
   if (inputRef.value && inputFocused.value) inputRef.value.focus();
+  emit("scorll-to-bottom");
 };
 
 const inputRef = ref<HTMLInputElement>();
@@ -25,6 +27,9 @@ const updateInputFocused = (value: boolean) => {
     inputFocused.value = value;
   }, 0);
 };
+watch(inputFocused, (value) => {
+  if (value) emit("scorll-to-bottom");
+});
 </script>
 
 <template>

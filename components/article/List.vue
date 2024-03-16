@@ -15,10 +15,24 @@ const gotoArticle = (id: string) => {
 
 <template>
   <ul flex="~ col gap-4">
-    <li class="self-end" w="fit" p="x-4 y-2" bg-slate-9 rd-5>
+    <li
+      w="fit"
+      p="x-4 y-2"
+      self-end
+      bg="blue-5 @dark:slate-8"
+      text="white @dark:slate-3"
+      rd-5
+    >
       上班真累。。。。
     </li>
-    <li class="self-end" w="fit" p="x-4 y-2" bg-slate-9 rd-5>
+    <li
+      w="fit"
+      p="x-4 y-2"
+      self-end
+      bg="blue-5 @dark:slate-8"
+      text="white @dark:slate-3"
+      rd-5
+    >
       上班真累。。。。<br />加油！
     </li>
 

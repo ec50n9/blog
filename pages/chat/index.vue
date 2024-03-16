@@ -84,7 +84,7 @@ const scrollToBottom = () => {
 </script>
 
 <template>
-  <div ref="chatContainer" tag="div" h-full flex flex-col of-auto vertical>
+  <div ref="chatContainer" tag="div" h-full flex flex-col of-y-auto of-x-hidden>
     <NH1 shrink-0 mb-0 px-3 pt-5>自言自语</NH1>
 
     <ChatMemberList

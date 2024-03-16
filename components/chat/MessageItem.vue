@@ -26,6 +26,7 @@ const avatarPlaceholder = "https://via.placeholder.com/50x50";
       bg-blue-1
       rd-3
       font-medium
+      break-words
       :class="['max-w-3/4', isMe ? 'bg-blue-5 c-white' : 'bg-slate-1 c-slate-7']"
       >{{ message.content }}</NElement
     >

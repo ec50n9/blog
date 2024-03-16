@@ -51,7 +51,7 @@ if (!kingUserInfo.value) kingUserInfo.value = await getKingUserInfo();
     </p>
 
     <ul class="flex justify-center gap-3 px-4 text-sm c-slate-4">
-      <li>最近更新: <span>2024-01-06</span></li>
+      <li>最近更新: <span>2024-03-16</span></li>
     </ul>
 
     <AppNav m="x-4 t-3" :nav-list="navList" />

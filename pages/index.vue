@@ -27,7 +27,7 @@ const { data: articles } = await listArticles(pageParams.value);
     <p
       class="py-4 px-8 text-center leading-tight text-5xl font-bold font-stylish c-emerald-6"
     >
-      👋 Hi there, welcome to My Blog!
+      👋 你好，欢迎光临!
     </p>
 
     <ul class="flex justify-center gap-3 px-4 text-sm c-slate-4">

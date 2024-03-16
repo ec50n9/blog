@@ -1,3 +1,5 @@
+import type { ArticleListVO, ArticleDetailVO } from "./types";
+
 export const listArticles = (params: PageParams) =>
   $fetch<Resp<ArticleListVO[]>>("https://w04oy7.laf.run/list-articles", {
     method: "GET",

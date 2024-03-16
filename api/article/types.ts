@@ -1,4 +1,4 @@
-interface ArticleListVO {
+export interface ArticleListVO {
   _id: string;
   title: string;
   summary?: string;
@@ -15,6 +15,6 @@ interface ArticleListVO {
   updated_at: number;
 }
 
-interface ArticleDetailVO extends ArticleListVO {
+export interface ArticleDetailVO extends ArticleListVO {
   content: string;
 }

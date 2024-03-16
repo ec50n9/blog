@@ -40,6 +40,7 @@ export default async function (ctx: FunctionContext) {
     // 生成 jwt token
     const payload = {
       uid: user._id,
+      is_admin: !!user.is_admin,
       exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 7,
     };
     const access_token = cloud.getToken(payload);

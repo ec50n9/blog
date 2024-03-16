@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-import { listArticles } from '~/api/article';
+import { listArticles } from "~/api/article";
+import { getKingUserInfo } from "~/api/user";
+import type { KingUserInfo } from "~/api/user/types";
 
 useHead({
   title: "ec50n9 的杂货铺",
@@ -20,14 +22,32 @@ const pageParams = useState(() => {
 });
 
 const { data: articles } = await listArticles(pageParams.value);
+
+const kingUserInfo = useState<KingUserInfo | null>(
+  "king-user-info",
+  () => null
+);
+if (!kingUserInfo.value) kingUserInfo.value = await getKingUserInfo();
 </script>
 
 <template>
   <div>
+    <p pt-10>
+      <img
+        mx-auto
+        size="28"
+        rd-full
+        style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px"
+        :src="kingUserInfo?.avatar"
+        :alt="kingUserInfo?.nickname"
+      />
+    </p>
+
     <p
-      class="py-4 px-8 text-center leading-tight text-5xl font-bold font-stylish c-emerald-6"
+      class="py-4 px-8 text-center leading-tight text-4xl font-bold font-stylish c-emerald-6"
     >
-      👋 你好，欢迎光临!
+      👋 Hi, I'm {{ kingUserInfo?.nickname }},<br />
+      a frontend developer.
     </p>
 
     <ul class="flex justify-center gap-3 px-4 text-sm c-slate-4">

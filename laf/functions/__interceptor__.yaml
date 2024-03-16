@@ -2,4 +2,5 @@ name: __interceptor__
 methods:
   - GET
   - POST
-tags: []
+tags:
+  - 系统

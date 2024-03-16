@@ -1,4 +1,5 @@
 name: get-article
 methods:
   - GET
-tags: []
+tags:
+  - 文章

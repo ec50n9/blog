@@ -1,6 +1,5 @@
-name: login-user
+name: get-king-user-info
 methods:
   - GET
-  - POST
 tags:
   - 用户

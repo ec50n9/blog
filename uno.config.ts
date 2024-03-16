@@ -63,9 +63,9 @@ export default defineConfig({
       /^toggle-bg(-(.+))?$/,
       ([, , c = "blue"]) =>
         [
-          "bg-gray-200 rounded-full dark:bg-gray-700 dark:border-gray-600",
+          "bg-slate-2 @dark:bg-gray-7 @dark:border-gray-600 rd-full",
           "transition",
-          "after:absolute after:content-[''] after:bg-white after:border-gray-300 after:border after:rounded-full after:transition-all",
+          "after:absolute after:content-[''] after:bg-white after:border-gray-300 @dark:after:bg-slate-3 @dark:after:b-slate-6 after:border after:rounded-full after:transition-all",
           `peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-${c}-300 dark:peer-focus:ring-${c}-800`,
           `peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white peer-checked:bg-${c}-600`,
           "w-11 h-6 after:top-[2px] after:start-[2px] after:h-5 after:w-5",
